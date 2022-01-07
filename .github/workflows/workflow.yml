@@ -11,7 +11,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-      - name: Execution des tests
+      - name: Install
         run: npm install
+      - name: Changement de répertoire
         run: cd test
-        run: mvn test
+      - name: Exécution des tests
+        run: npm test
