@@ -18,8 +18,11 @@ jobs:
       - name: Exécution des tests
         run: npm test
   docker:
+    needs: test-unitaire
     runs-on: ubuntu-latest
     steps:
+      - name: Récuperation du repo
+        uses: actions/checkout@v2
       - name: Install QEMU Docker
         uses: docker/setup-qemu-action@v1
       - name: Install BuildX docker
