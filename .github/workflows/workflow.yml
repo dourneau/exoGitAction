@@ -15,8 +15,6 @@ jobs:
           node-version: '14'
       - name: Install
         run: npm install
-      - name: Changement de répertoire
-        run: cd test
       - name: Exécution des tests
         run: npm test
   docker:
