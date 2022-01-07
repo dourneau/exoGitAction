@@ -1,4 +1,4 @@
-name: Workflow
+name: Workflow test
 on:
   pull_request:
     branches:
